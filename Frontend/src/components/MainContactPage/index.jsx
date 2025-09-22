@@ -25,7 +25,7 @@ class MainContactPage extends Component {
 
   fetchContacts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/users-contact-details");
+      const response = await fetch("https://contact-book-app-1-6bjv.onrender.com/users-contact-details");
       const data = await response.json();
       this.setState({ totalUsers: data, isLoading: false });
     } catch (error) {
@@ -40,7 +40,7 @@ class MainContactPage extends Component {
 
   onDeleteContact = async (id) => {
     try {
-      await fetch(`http://localhost:5000/delete-users-contact-details/${id}`, {
+      await fetch(`https://contact-book-app-1-6bjv.onrender.com/delete-users-contact-details/${id}`, {
         method: "DELETE",
       });
       this.setState((prevState) => ({
@@ -77,7 +77,7 @@ class MainContactPage extends Component {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/add-users-contact-details", {
+      const response = await fetch("https://contact-book-app-1-6bjv.onrender.com/add-users-contact-details", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: newName, email: newEmail, phone: newPhone }),

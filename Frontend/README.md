@@ -1,12 +1,99 @@
-# React + Vite
+# Contact Book App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack contact management application built with React, Node.js, Express, and SQLite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new contacts with name, email, and phone number
+- View all contacts in a responsive layout
+- Delete existing contacts
+- Mobile-friendly interface with Bootstrap
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+
+## Project Structure
+
+```
+contact-book-app/
+├── Backend/
+│   ├── server.js
+│   └── contacts.db
+└── Frontend/
+    └── src/
+        ├── components/
+        └── App.jsx
+```
+
+## Installation
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/Velugondaiah/contact-book-app.git
+cd contact-book-app
+```
+
+2. **Install Backend Dependencies:**
+```bash
+cd Backend
+npm install
+```
+
+3. **Install Frontend Dependencies:**
+```bash
+cd ../Frontend
+npm install
+```
+
+## Running the Application
+
+1. **Start the Backend Server:**
+```bash
+cd Backend
+npm start
+```
+The server will run on http://localhost:5000
+
+2. **Start the Frontend Development Server:**
+```bash
+cd Frontend
+npm run dev
+```
+The frontend will run on http://localhost:5173
+
+## API Endpoints
+
+- `GET /users-contact-details` - Get all contacts
+- `POST /add-users-contact-details` - Add a new contact
+- `DELETE /delete-users-contact-details/:id` - Delete a contact
+
+## Technologies Used
+
+- Frontend:
+  - React
+  - Bootstrap
+  - Vite
+- Backend:
+  - Node.js
+  - Express
+  - SQLite
+  - CORS
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License
+
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_twitter)
+Project Link: [https://github.com/Velugondaiah/contact-book-app](https://github.com/Velugondaiah/contact-book-app)
